@@ -1,16 +1,62 @@
-# React + Vite
+# ShadeMatch
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ShadeMatch is a full-stack web application that helps users discover equivalent foundation shades across different makeup brands using color-based matching and smart filtering.
 
-Currently, two official plugins are available:
+The project focuses on creating a modern, visually interactive, and user-friendly beauty-tech experience where users can compare foundation shades, explore similar matches, and view color swatches using real makeup shade datasets.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Browse foundation shades from multiple brands
+- Cross-brand shade matching
+- Visual shade swatches using HEX color values
+- Responsive and modern UI
+- REST API integration
+- Structured backend architecture
+- Dynamic filtering and search functionality
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+### Frontend
+- React
+- Vite
+- Tailwind CSS
+
+### Backend
+- Java
+- Spring Boot
+
+### Database
+- PostgreSQL
+
+---
+
+## Dataset Inspiration
+
+Dataset inspiration and structure reference:
+https://github.com/shelbyvjacobs/makeup-shades-api
+
+The dataset includes:
+- Brand names
+- Product lines
+- HEX color values
+- HSL/HSV color information
+- Regional shade groupings
+
+---
+
+## Project Structure
+
+```bash
+SHADEMATCH/
+│
+├── backend/          # Spring Boot backend
+├── public/           # Static frontend assets
+├── src/              # React source code
+│
+├── package.json
+├── vite.config.js
+└── README.md
