@@ -9,17 +9,14 @@ export default function ResultsGrid({ results, brands }) {
         Closest Matches Found
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {results.map((shade) => {
-          const brand = brands.find((b) => b.id === shade.brand);
-          return (
-            <ShadeCard
-              key={shade.id}
-              shade={shade}
-              brandName={brand?.name}
-              productName={brand?.product}
-            />
-          );
-        })}
+        {results.map((shade) => (
+          <ShadeCard
+            key={shade.id}
+            shade={shade}
+            brandName={shade.brand}
+            productName={shade.product}
+          />
+        ))}
       </div>
     </section>
   );

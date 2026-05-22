@@ -43,9 +43,9 @@ export default function ShadeSelector({
           <option value="">— Select Shade —</option>
           {filteredShades.map((s) => (
             <option key={s.id} value={s.id}>
-              {s.name}
+                #{s.name}
             </option>
-          ))}
+        ))}
         </select>
       </div>
     </section>
