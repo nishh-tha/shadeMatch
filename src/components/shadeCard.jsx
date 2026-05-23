@@ -1,25 +1,42 @@
 export default function ShadeCard({ shade, brandName, productName }) {
   return (
-    <div className="flex flex-col bg-white border border-stone-100 hover:border-stone-300 transition-all duration-300 group">
-      {/* Color Swatch */}
-      <div
-        className="w-full h-28 transition-transform duration-300 group-hover:scale-[1.02]"
-        style={{ backgroundColor: shade.hex }}
-      />
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      backgroundColor: '#fdf6f0',
+      border: '1px solid #e8d5c0',
+      borderRadius: '4px',
+      overflow: 'hidden',
+      transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+      cursor: 'default',
+    }}
+      onMouseEnter={e => {
+        e.currentTarget.style.transform = 'translateY(-4px)';
+        e.currentTarget.style.boxShadow = '0 12px 32px rgba(193,127,90,0.15)';
+      }}
+      onMouseLeave={e => {
+        e.currentTarget.style.transform = 'translateY(0)';
+        e.currentTarget.style.boxShadow = 'none';
+      }}
+    >
+      {/* Swatch */}
+      <div style={{ width: '100%', height: '160px', backgroundColor: `#${shade.hex}` }} />
+
       {/* Info */}
-      <div className="px-4 py-3 flex flex-col gap-1">
-        <span className="text-[10px] tracking-widest uppercase text-stone-400">
+      <div style={{ padding: '1rem 1.1rem 1.1rem', display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
+        <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '0.62rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#a07856' }}>
           {brandName}
         </span>
-        <span className="text-sm font-medium text-stone-700">{shade.name}</span>
-        <span className="text-[11px] text-stone-400">{productName}</span>
-        <div className="flex items-center gap-2 mt-1">
-          <div
-            className="w-4 h-4 rounded-full border border-stone-200"
-            style={{ backgroundColor: shade.hex }}
-          />
-          <span className="text-[10px] text-stone-400 uppercase tracking-widest">
-            {shade.hex}
+        <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', color: '#3d2b1f', fontWeight: 400 }}>
+          {shade.name}
+        </span>
+        <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '0.75rem', color: '#b08060' }}>
+          {productName}
+        </span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.5rem' }}>
+          <div style={{ width: '14px', height: '14px', borderRadius: '50%', backgroundColor: `#${shade.hex}`, border: '1px solid #d4b89a' }} />
+          <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '0.65rem', color: '#b08060', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
+            #{shade.hex}
           </span>
         </div>
       </div>

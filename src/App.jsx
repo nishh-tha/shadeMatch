@@ -44,7 +44,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-800">
+    <div className="min-h-screen" style={{ backgroundColor: '#faf3ec', minHeight: '100vh' }}>
       <Navbar />
       <Hero />
       <ShadeSelector
@@ -58,15 +58,17 @@ export default function App() {
 
       {/* Selected shade preview */}
       {selectedShade && (
-        <div className="flex flex-col items-center py-4 gap-2">
-          <p className="text-xs tracking-widest uppercase text-stone-400">
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '1.5rem', gap: '0.75rem' }}>
+          <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '0.65rem', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#a07856' }}>
             Your Shade
           </p>
-          <div
-            className="w-16 h-16 rounded-full border-2 border-stone-200 shadow-sm"
-            style={{ backgroundColor: `#${selectedShade.hex}` }}
-          />
-          <p className="text-sm text-stone-600">{selectedShade.productShort?.toUpperCase()} — {selectedShade.hex}</p>
+          <div style={{ width: '72px', height: '72px', borderRadius: '50%', backgroundColor: `#${selectedShade.hex}`, border: '3px solid #d4b89a', boxShadow: '0 4px 16px rgba(193,127,90,0.2)' }} />
+          <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1rem', color: '#3d2b1f' }}>
+            {selectedShade.name}
+          </p>
+          <p style={{ fontFamily: "'Jost', sans-serif", fontSize: '0.75rem', color: '#a07856' }}>
+            {selectedShade.product}
+          </p>
         </div>
       )}
 

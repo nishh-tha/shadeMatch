@@ -4,11 +4,17 @@ export default function ResultsGrid({ results, brands }) {
   if (!results || results.length === 0) return null;
 
   return (
-    <section className="px-8 py-10 max-w-4xl mx-auto">
-      <p className="text-xs tracking-[0.3em] uppercase text-stone-400 mb-6 text-center">
-        Closest Matches Found
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <section style={{ padding: '3rem 2rem 4rem', maxWidth: '1100px', margin: '0 auto' }}>
+      {/* Divider */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', marginBottom: '2.5rem' }}>
+        <div style={{ flex: 1, height: '1px', backgroundColor: '#d4b89a' }} />
+        <span style={{ fontFamily: "'Jost', sans-serif", fontSize: '0.65rem', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#a07856', whiteSpace: 'nowrap' }}>
+          Closest Matches Found
+        </span>
+        <div style={{ flex: 1, height: '1px', backgroundColor: '#d4b89a' }} />
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1.5rem' }}>
         {results.map((shade) => (
           <ShadeCard
             key={shade.id}
