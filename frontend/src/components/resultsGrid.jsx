@@ -15,12 +15,13 @@ export default function ResultsGrid({ results, brands }) {
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1.5rem' }}>
-        {results.map((shade) => (
+        {results.map((match) => (
           <ShadeCard
-            key={shade.id}
-            shade={shade}
-            brandName={shade.brand}
-            productName={shade.product}
+            key={match.shade.id}
+            shade={match.shade}
+            brandName={match.shade.brand}
+            productName={match.shade.product}
+            similarity={match.similarity}
           />
         ))}
       </div>

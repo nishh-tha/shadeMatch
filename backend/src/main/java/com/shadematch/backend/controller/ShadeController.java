@@ -3,6 +3,7 @@ package com.shadematch.backend.controller;
 import com.shadematch.backend.model.Shade;
 import com.shadematch.backend.service.ShadeService;
 import org.springframework.web.bind.annotation.*;
+import com.shadematch.backend.dto.MatchResult;
 
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class ShadeController {
     }
 
     @GetMapping("/match")
-    public List<Shade> getMatches(@RequestParam String hex) {
+        public List<MatchResult> getMatches(@RequestParam String hex) {
         return shadeService.findMatches(hex);
     }
 }
