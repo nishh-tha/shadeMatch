@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavBar";
 import Hero from "./components/Hero";
 import ShadeSelector from "./components/ShadeSelector";
 import ResultsGrid from "./components/ResultsGrid";
