@@ -8,7 +8,7 @@ Select your current foundation shade and instantly discover the closest equivale
 
 ---
 
-![ShadeMatch Preview](preview.png)
+![ShadeMatch Preview](preview.gif)
 
 ---
 
