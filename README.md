@@ -4,7 +4,6 @@ A full-stack web app that finds your foundation shade match across makeup brands
 
 Select your current foundation shade and instantly discover the closest equivalents from other brands, ranked by match percentage using a hex color distance algorithm.
 
-🌐 **Live demo:** [shade-match-iota.vercel.app](https://shade-match-iota.vercel.app)
 
 ---
 
