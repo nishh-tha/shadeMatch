@@ -1,4 +1,5 @@
 # ShadeMatch 💄
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://shade-match-iota.vercel.app/)
 
 A full-stack web app that finds your foundation shade match across makeup brands — powered by color science, not guesswork.
 
